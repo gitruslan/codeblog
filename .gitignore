@@ -1,4 +1,5 @@
 nbproject
+config/application.config.php
 ._*
 .~lock.*
 .buildpath
