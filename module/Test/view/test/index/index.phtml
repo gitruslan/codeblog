@@ -1,0 +1,26 @@
+<div class="jumbotron">
+    <table class='table'>
+        <thead>
+            <th>id</th>
+            <th>title</th>
+            <th>autor</th>
+            <th>text</th>
+            <th>date</th>
+        </thead>
+        <tbody>
+     <?php
+        if(isset($this->articles)){
+           $c = 1; 
+           foreach($this->articles as $art){
+              echo "<tr>"; 
+              echo "<td>{$c}</td><td>{$art['title']}</td><td>{$art['autor']}</td>"
+                   . "<td>{$art['text']}</td><td>{$art['date_create']}</td>";
+              echo "</tr>";
+              $c++;
+           } 
+        }
+     
+     ?>
+        </tbody>  
+      </table>  
+</div>

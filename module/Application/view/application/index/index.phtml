@@ -1,0 +1,20 @@
+
+<?php
+ $this->headTitle($title); 
+  if(is_array($articles)):?>
+     <?php foreach($articles as $art):?>
+     <div class="article_block"> 
+       <div class="article_title left">
+           <h2>
+              <?php echo "<a href='#'>".$art['title']."</a>";?>
+           </h2>
+       </div>
+         <div class="comment_count right"><a href="/art/<?php echo $art['alias'].".html" ?>"><?=rand(1,10)?></a></div>  
+       <div class="clr"></div> 
+       <div class="post_by"><span><?php echo "Posted by ".$art['autor']." on ".date("l, F d, Y",strtotime($art['date_create']));?></span></div>
+       <div class="article_text"><?php echo $art['text'];?></div>
+     </div>
+     <?php endforeach;?>
+ <?php else:?>
+  <div>Sorry, but there are no articles yet !</div>
+<?php endif; ?>

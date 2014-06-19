@@ -1,0 +1,12 @@
+
+<?php 
+$this->headTitle($title); 
+  if($articles instanceof Traversable):?>
+     <?php foreach($articles as $art):?>
+      <div class="">
+          <?php echo $art['title'];?>
+      </div>
+     <?php endforeach;?>
+<?php endif; ?>
+
+

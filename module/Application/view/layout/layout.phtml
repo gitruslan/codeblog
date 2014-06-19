@@ -1,0 +1,67 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+         
+        <?php echo $this->headTitle($title); ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+            ->prependFile($this->basePath() . '/js/jquery.min.js')
+            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+        <div id='header_block'>
+            <div id="header_middle">
+                <div class="logo_title_text">
+                    {<a href="/"> CodeBlog </a>}
+                </div>
+                <div class="under_title_text">
+                    This blog about everything related to programming ! 
+                </div>
+            </div>
+        </div>
+        <div id="content_block">
+            <div id="top_menu">
+                <ul class="ul_menu">
+                    <li><a href="<?php echo $this->url('home')?>">Home</a></li>
+                     <li><a href="<?php echo $this->url('contact')?>">Contacts</a></li>
+                </ul>
+                <div class="social_block">
+                    <div class="s_g"></div>
+                    <div class="s_y"></div>
+                    <div class="s_f"></div>
+                    <div class="s_you"></div>
+                     <div class="s_t"></div>
+                </div>
+            </div>
+            <div id="container_block">
+                <div class="left_block left">
+                    <?php echo $this->content;?>
+                </div>
+                <div class="right_block right">
+                    <?php echo $this->content_right?>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div id="footer_block"></div>
+        </div>
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

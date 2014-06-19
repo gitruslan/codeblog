@@ -1,0 +1,13 @@
+<?php
+ $this->headTitle($title);
+ $this->headMeta()->appendName('keywords', $keywords);
+ $this->headMeta()->appendName('description', $description);
+?>
+<div id="full_artcile_wrapper">
+    <?php if($full_article):?>
+       
+     <?php else:?>
+      <h2>Page not found.</h2>
+    <?php endif;?>
+</div>
+
