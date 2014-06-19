@@ -13,7 +13,7 @@ class ArticleModel {
 
    public function __construct(){
        $this->setArticleType();
-       $this->_db =  MainModelDriver::getInstance();
+       $this->_db = MainModelDriver::getInstance()->getDriver();
    }
 
    public function setArticleType($art_type = null){
@@ -21,11 +21,11 @@ class ArticleModel {
    }
 
    /**
-    * @return ArticleModel
+    * return ArticleModel
     */
    public static function getInstance(){
        if(self::$_instance == null)
-          return new ArticleModel();
+          return self::$_instance = new self();
        else return self::$_instance;
 
    }
