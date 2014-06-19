@@ -1,4 +1,5 @@
 nbproject
+config
 ._*
 .~lock.*
 .buildpath
@@ -10,3 +11,4 @@ composer.lock
 composer.json
 composer.phar
 vendor/bin
+

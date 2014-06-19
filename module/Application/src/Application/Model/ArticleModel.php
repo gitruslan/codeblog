@@ -13,11 +13,11 @@ class ArticleModel {
 
    public function __construct(){
        $this->setArticleType();
-       $this->_db = MainModelDriver::getInstance()->getDriver();
+       $this->_db = MainModelDriver::getInstance()->getDriver()->getResource();
    }
 
    public function setArticleType($art_type = null){
-       $this->_article_type = $this->_art_prefix.$this->_art_type;
+       $this->_article_type = $this->_art_prefix.$art_type;
    }
 
    /**
