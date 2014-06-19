@@ -10,7 +10,6 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 use Application\Model\ArticleModel;
 
 class IndexController extends AbstractActionController
@@ -24,7 +23,7 @@ class IndexController extends AbstractActionController
     
     public function indexAction()
     {
-        $this->_view->articles = $this->_model->getArticles();    
+        $this->_view->articles = $this->_model->getArticles();
         $this->_view->title = "Main page - codeblog";
         return $this->_view;
     }
@@ -32,8 +31,7 @@ class IndexController extends AbstractActionController
     public function articleAction(){
         $alias = explode(".",$this->params('id'));
         if(sizeof($alias) == 2){
-       
-            $this->_view->full_article = $this->_model->getArticleByAlias($alias[0]);   
+            $this->_view->full_article = $this->_model->getArticleByAlias($alias[0]);
             $this->_view->title = $this->_view->full_article['title']." - codeblog";
             $this->_view->keywords = $this->_view->full_article['keywords'];
             $this->_view->description = $this->_view->full_article['description'];
