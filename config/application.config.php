@@ -7,10 +7,10 @@ return array(
     ),
     'db_data'=>array(
        'driver'=>'pdo',
-       'dsn'=>'mysql:dbname=ornestblog;host=localhost',
-       'user'=>'ornestblog',
-       'password'=>'Tt0MxrDO',
-       'dbname'=>'ornestblog',       
+       'dsn'=>'mysql:dbname=;host=localhost',
+       'user'=>'',
+       'password'=>'',
+       'dbname'=>'',       
     ),
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => array(
